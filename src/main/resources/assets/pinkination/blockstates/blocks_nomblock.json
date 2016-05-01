@@ -1,5 +1,19 @@
 {
     "variants": {
-        "normal": { "model": "pinkination:blocks_nomblock_model" }
+        "facing=north": {
+            "model": "pinkination:blocks_nomblock_model"
+        },
+        "facing=south": {
+            "model": "pinkination:blocks_nomblock_model",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "pinkination:blocks_nomblock_model",
+            "y": 270
+        },
+        "facing=east": {
+            "model": "pinkination:blocks_nomblock_model",
+            "y": 90
+        }
     }
 }

@@ -1,3 +1,12 @@
 tile.pinkination.loveblock.name=Love Block
 tile.pinkination.kittehblock.name=Kitteh Block
-tile.pinkination.oinkerblock.name=Oinker
+tile.pinkination.nomblock.name=Hungry Pig
+tile.pinkination.depositblock.name=Deposit Pig
+tile.pinkination.swapblock.name=Exchange Pig
+tile.pinkination.withdrawblock.name=Withdraw Pig
+
+item.pinkination.piggocoincopper.name=Copper Piggocoin
+item.pinkination.piggocoinsilver.name=Silver Piggocoin
+item.pinkination.piggocoingold.name=Gold Piggocoin
+item.pinkination.piggocoinpigtastic.name=Pigtastic Piggocoin
+

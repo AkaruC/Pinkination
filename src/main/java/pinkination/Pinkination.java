@@ -9,11 +9,11 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import pinkination.blocks.KittehBlock;
-import pinkination.blocks.LoveBlock;
-import pinkination.blocks.PiggoDepositBlock;
-import pinkination.blocks.PiggoNomBlock;
-import pinkination.items.PiggoCoin;
+import pinkination.blocks.*;
+import pinkination.items.PiggoCoinCopper;
+import pinkination.items.PiggoCoinGold;
+import pinkination.items.PiggoCoinPigtastic;
+import pinkination.items.PiggoCoinSilver;
 import pinkination.proxy.IProxy;
 
 
@@ -28,7 +28,12 @@ public class Pinkination {
     public static Block love;
     public static Block kitteh;
     public static Block deposit;
-    public static Item piggocoin;
+    public static Block swap;
+
+    public static Item piggocoincopper;
+    public static Item piggocoinsilver;
+    public static Item piggocoingold;
+    public static Item piggocoinpigtastic;
 
 
 
@@ -53,9 +58,20 @@ public class Pinkination {
       deposit = new PiggoDepositBlock();
         GameRegistry.register(deposit);
 
-      piggocoin = new PiggoCoin();
-        GameRegistry.register(piggocoin);
+      swap =  new PiggoSwapBlock();
+        GameRegistry.register(swap);
 
+
+
+
+      piggocoincopper = new PiggoCoinCopper();
+        GameRegistry.register(piggocoincopper);
+      piggocoinsilver = new PiggoCoinSilver();
+        GameRegistry.register(piggocoinsilver);
+      piggocoingold = new PiggoCoinGold();
+        GameRegistry.register(piggocoingold);
+      piggocoinpigtastic = new PiggoCoinPigtastic();
+        GameRegistry.register(piggocoinpigtastic);
       proxy.registerRenderers();
     }
 

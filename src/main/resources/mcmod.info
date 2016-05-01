@@ -1,5 +1,6 @@
 [
 {
+  "modid": "pinkination",
   "name": "Pinkination",
   "description": "Adds pink pretties.",
   "version": "${version}",
