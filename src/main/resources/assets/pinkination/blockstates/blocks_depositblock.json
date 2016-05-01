@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "pinkination:blocks_depositblock_model" }
+    }
+}

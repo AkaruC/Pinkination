@@ -1,0 +1,15 @@
+[
+{
+  "name": "Pinkination",
+  "description": "Adds pink pretties.",
+  "version": "${version}",
+  "mcversion": "1.9",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["AkaruC"],
+  "credits": "Glassmaker, for helping me out a lot",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

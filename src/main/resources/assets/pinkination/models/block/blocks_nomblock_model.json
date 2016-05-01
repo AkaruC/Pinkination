@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "pinkination:blocks/pinkination_general_blankside",
+        "up": "pinkination:blocks/pinkination_general_heart",
+        "north": "pinkination:blocks/pinkination_piggo_face",
+        "east": "pinkination:blocks/pinkination_general_blankside",
+        "south": "pinkination:blocks/pinkination_piggo_rear",
+        "west": "pinkination:blocks/pinkination_general_blankside",
+        "particle": "blocks/lapis_block"
+    }
+}
