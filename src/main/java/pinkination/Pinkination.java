@@ -1,6 +1,7 @@
 package pinkination;
 
 import net.minecraft.block.Block;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -10,10 +11,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import pinkination.blocks.*;
-import pinkination.items.PiggoCoinCopper;
-import pinkination.items.PiggoCoinGold;
-import pinkination.items.PiggoCoinPigtastic;
-import pinkination.items.PiggoCoinSilver;
+import pinkination.items.*;
+import pinkination.property.PlayerDataHandler;
 import pinkination.proxy.IProxy;
 
 
@@ -30,10 +29,12 @@ public class Pinkination {
     public static Block deposit;
     public static Block swap;
 
+    public static PlayerDataHandler playerDataHandler;
     public static Item piggocoincopper;
     public static Item piggocoinsilver;
     public static Item piggocoingold;
     public static Item piggocoinpigtastic;
+    public static Item piggopurse;
 
 
 
@@ -43,9 +44,11 @@ public class Pinkination {
     // Says where the client and server 'proxy' code is loaded.
     @SidedProxy(clientSide = "pinkination.proxy.ClientProxy", serverSide = "pinkination.proxy.CommonProxy")
     public static IProxy proxy;
+
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        playerDataHandler = new PlayerDataHandler();
       oinker =  new PiggoNomBlock();
         GameRegistry.register(oinker);
 
@@ -72,6 +75,8 @@ public class Pinkination {
         GameRegistry.register(piggocoingold);
       piggocoinpigtastic = new PiggoCoinPigtastic();
         GameRegistry.register(piggocoinpigtastic);
+      piggopurse = new PiggoPurse();
+        GameRegistry.register(piggopurse);
       proxy.registerRenderers();
     }
 
