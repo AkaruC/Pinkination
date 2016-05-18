@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "pinkination:blocks/pinkination_general_blankside",
+    "up": "pinkination:blocks/pinkination_deposit_topside",
+    "north": "pinkination:blocks/pinkination_coinblock_gold",
+    "east": "pinkination:blocks/pinkination_coinblock_pigtastic",
+    "south": "pinkination:blocks/pinkination_coinblock_copper",
+    "west": "pinkination:blocks/pinkination_coinblock_silver",
+    "particle": "blocks/pink_wool"
+  }
+}

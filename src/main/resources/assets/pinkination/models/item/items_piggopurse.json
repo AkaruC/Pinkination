@@ -1,7 +1,7 @@
 {
   "parent": "builtin/generated",
   "textures": {
-    "layer0": "pinkination:items/pinkination_piggocoin_copper"
+    "layer0": "pinkination:items/pinkination_piggopurse"
   },
   "display": {
     "thirdperson_lefthand": {

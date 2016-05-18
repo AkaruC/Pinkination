@@ -1,41 +1,20 @@
 package pinkination.blocks;
 
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockHorizontal;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyDirection;
-import net.minecraft.block.state.BlockStateContainer;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Items;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.PlayerCapabilities.*;
-import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemFood;
-
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityFurnace;
-import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.BlockRenderLayer;
-import net.minecraft.util.EnumFacing;
-
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.SoundCategory;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import pinkination.Pinkination;
+import pinkination.registry.ModItems;
 
 
 public class PiggoNomBlock extends PinkinationBlock {
@@ -44,12 +23,11 @@ public class PiggoNomBlock extends PinkinationBlock {
     public PiggoNomBlock() {
 
         setUnlocalizedName("pinkination.nomblock");
-        setRegistryName("blocks_nomblock");
+
         setHardness(2.0F);
         setHarvestLevel("pickaxe", 1);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-        GameRegistry.register(this);
-        GameRegistry.register(new ItemBlock(this), getRegistryName());
+
 
         this.setCreativeTab(CreativeTabs.tabBlock);   // the block will appear on the Blocks tab in creative
     }
@@ -59,11 +37,6 @@ public class PiggoNomBlock extends PinkinationBlock {
     public BlockRenderLayer getBlockLayer() {
         return BlockRenderLayer.SOLID;
     }
-
-
-
-
-
 
 
     @Override
@@ -80,11 +53,11 @@ public class PiggoNomBlock extends PinkinationBlock {
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-    EnumFacing facing = state.getValue(FACING);
-    BlockPos facepos = pos.offset(facing);
+        EnumFacing facing = state.getValue(FACING);
+        BlockPos facepos = pos.offset(facing);
 
 
-        if (side == facing ) {
+        if (side == facing) {
             if (heldItem != null && heldItem.getItem() instanceof ItemFood) {
 
                 InventoryPlayer playerInventory = playerIn.inventory;
@@ -100,7 +73,7 @@ public class PiggoNomBlock extends PinkinationBlock {
                         playerInventory.decrStackSize(i, 1);
 
                         // add 1 :D
-                        ItemStack item = new ItemStack(Pinkination.piggocoincopper, amount);
+                        ItemStack item = new ItemStack(ModItems.piggoCoinCopper, amount);
                         boolean added = playerInventory.addItemStackToInventory(item);
 
                         if (added) {
@@ -112,26 +85,26 @@ public class PiggoNomBlock extends PinkinationBlock {
                     }
                 }
 
-                switch (facing){
+                switch (facing) {
                     case NORTH:
                         worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX(), pos.getY() + 1.0, pos.getZ(), 0D, 0D, 0D);
                         worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ(), 0D, 0D, 0D);
-                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX() + 1.0, pos.getY() + 1.0, pos.getZ() , 0D, 0D, 0D);
+                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX() + 1.0, pos.getY() + 1.0, pos.getZ(), 0D, 0D, 0D);
                         break;
                     case SOUTH:
-                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX(), pos.getY() + 1.0, pos.getZ()+1.0, 0D, 0D, 0D);
-                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX()+ 0.5, pos.getY() + 1.0, pos.getZ()+1.0, 0D, 0D, 0D);
-                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX()+ 1.0, pos.getY() + 1.0, pos.getZ()+ 1.0 , 0D, 0D, 0D);
+                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX(), pos.getY() + 1.0, pos.getZ() + 1.0, 0D, 0D, 0D);
+                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 1.0, 0D, 0D, 0D);
+                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX() + 1.0, pos.getY() + 1.0, pos.getZ() + 1.0, 0D, 0D, 0D);
                         break;
                     case EAST:
                         worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX() + 1.0, pos.getY() + 1.0, pos.getZ(), 0D, 0D, 0D);
-                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX() + 1.0, pos.getY() + 1.0, pos.getZ()+ 0.5, 0D, 0D, 0D);
-                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX() + 1.0, pos.getY() + 1.0, pos.getZ()+ 1.0 , 0D, 0D, 0D);
+                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX() + 1.0, pos.getY() + 1.0, pos.getZ() + 0.5, 0D, 0D, 0D);
+                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX() + 1.0, pos.getY() + 1.0, pos.getZ() + 1.0, 0D, 0D, 0D);
                         break;
                     case WEST:
                         worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX(), pos.getY() + 1.0, pos.getZ(), 0D, 0D, 0D);
-                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX(), pos.getY() + 1.0, pos.getZ()+ 0.5, 0D, 0D, 0D);
-                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX(), pos.getY() + 1.0, pos.getZ()+ 1.0 , 0D, 0D, 0D);
+                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX(), pos.getY() + 1.0, pos.getZ() + 0.5, 0D, 0D, 0D);
+                        worldIn.spawnParticle(EnumParticleTypes.HEART, pos.getX(), pos.getY() + 1.0, pos.getZ() + 1.0, 0D, 0D, 0D);
                         break;
                     default:
                         break;
@@ -143,7 +116,7 @@ public class PiggoNomBlock extends PinkinationBlock {
         } else if (side == facing.getOpposite()) {
 
 
-                worldIn.spawnParticle(EnumParticleTypes.FLAME, facepos.getX(), pos.getY(), pos.getZ(), 0.0D, 1.0D, 0.0D);
+            worldIn.spawnParticle(EnumParticleTypes.FLAME, facepos.getX(), pos.getY(), pos.getZ(), 0.0D, 1.0D, 0.0D);
 
             worldIn.playSound(playerIn, pos, SoundEvents.entity_endermen_scream, SoundCategory.MASTER, 1F, 1F);
             worldIn.playSound(playerIn, pos, SoundEvents.entity_pig_death, SoundCategory.MASTER, 1F, 1F);

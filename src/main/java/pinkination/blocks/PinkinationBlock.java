@@ -19,11 +19,12 @@ import net.minecraft.world.World;
 public class PinkinationBlock extends Block {
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
 
-    public PinkinationBlock(){
+    public PinkinationBlock() {
         super(Material.rock);
 
 
     }
+
     public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
         return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
     }
@@ -65,6 +66,7 @@ public class PinkinationBlock extends Block {
             worldIn.setBlockState(pos, state.withProperty(FACING, enumfacing), 2);
         }
     }
+
     public IBlockState getStateFromMeta(int meta) {
         EnumFacing enumfacing = EnumFacing.getFront(meta);
 

@@ -3,13 +3,13 @@ package pinkination.items;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class PiggoCoinCopper extends Item {
+public class PiggoCoinCopper extends ItemCoin {
 
     public PiggoCoinCopper() {
         this.setCreativeTab(CreativeTabs.tabMaterials);
         this.setUnlocalizedName("pinkination.piggocoincopper");
-        this.setRegistryName("items_piggocoincopper");
+        this.setValue(1);
 
-        this.setMaxStackSize(64);
+
     }
 }

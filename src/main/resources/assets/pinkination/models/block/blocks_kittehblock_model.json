@@ -1,12 +1,12 @@
 {
-    "parent": "block/cube",
-    "textures": {
-        "down": "pinkination:blocks/pinkination_general_blankside",
-        "up": "pinkination:blocks/pinkination_general_blankside",
-        "north": "pinkination:blocks/pinkination_kittehblock_faceside",
-        "east": "pinkination:blocks/pinkination_general_heart",
-        "south": "pinkination:blocks/pinkination_general_heart",
-        "west": "pinkination:blocks/pinkination_general_heart",
-        "particle": "blocks/lapis_block"
-    }
+  "parent": "block/cube",
+  "textures": {
+    "down": "pinkination:blocks/pinkination_general_blankside",
+    "up": "pinkination:blocks/pinkination_general_blankside",
+    "north": "pinkination:blocks/pinkination_kittehblock_faceside",
+    "east": "pinkination:blocks/pinkination_general_heart",
+    "south": "pinkination:blocks/pinkination_general_heart",
+    "west": "pinkination:blocks/pinkination_general_heart",
+    "particle": "blocks/pink_wool"
+  }
 }

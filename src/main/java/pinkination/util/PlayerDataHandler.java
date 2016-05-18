@@ -1,15 +1,15 @@
-package pinkination.property;
+package pinkination.util;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.nbt.NBTTagCompound;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.nbt.NBTTagCompound;
-
 /**
- * Created by Akaru on 5/16/2016.
+ * Credits to Vazkii for this system in her psi mod
  */
 public class PlayerDataHandler {
 
@@ -85,14 +85,29 @@ public class PlayerDataHandler {
 
         public int balance;
 
-        public int getBalance(){
+        public int getBalance() {
             return this.balance;
         }
 
-        public PlayerData setBalance(int bal){
-            this.balance =  bal;
+        public PlayerData setBalance(int bal) {
+            this.balance = bal;
             save();
             return this;
+        }
+
+        public PlayerData addBalance(int add) {
+            this.balance = balance + add;
+            save();
+            return this;
+
+
+        }
+        public PlayerData subtractBalance(int sub) {
+            this.balance = balance - sub;
+            save();
+            return this;
+
+
         }
 
         public void save() {

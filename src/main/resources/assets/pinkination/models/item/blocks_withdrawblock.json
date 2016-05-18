@@ -1,5 +1,5 @@
 {
-  "parent": "pinkination:block/blocks_depositblock_model",
+  "parent": "pinkination:block/blocks_withdrawblock_model",
   "display": {
     "thirdperson": {
       "rotation": [
