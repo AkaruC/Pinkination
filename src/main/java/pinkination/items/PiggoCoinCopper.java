@@ -6,7 +6,7 @@ import net.minecraft.item.Item;
 public class PiggoCoinCopper extends ItemCoin {
 
     public PiggoCoinCopper() {
-        this.setCreativeTab(CreativeTabs.tabMaterials);
+        this.setCreativeTab(CreativeTabs.MATERIALS);
         this.setUnlocalizedName("pinkination.piggocoincopper");
         this.setValue(1);
 

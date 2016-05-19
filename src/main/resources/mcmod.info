@@ -4,7 +4,7 @@
   "name": "Pinkination",
   "description": "Adds pink pretties.",
   "version": "${version}",
-  "mcversion": "1.9",
+  "mcversion": "1.9.4",
   "url": "",
   "updateUrl": "",
   "authorList": ["AkaruC"],

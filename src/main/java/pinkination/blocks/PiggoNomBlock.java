@@ -29,7 +29,7 @@ public class PiggoNomBlock extends PinkinationBlock {
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 
 
-        this.setCreativeTab(CreativeTabs.tabBlock);   // the block will appear on the Blocks tab in creative
+        this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);   // the block will appear on the Blocks tab in creative
     }
 
     // the block will render in the SOLID layer.  See http://greyminecraftcoder.blogspot.co.at/2014/12/block-rendering-18.html for more information.
@@ -42,7 +42,7 @@ public class PiggoNomBlock extends PinkinationBlock {
     @Override
     public void onBlockClicked(World worldIn, BlockPos pos, EntityPlayer playerIn) {
         super.onBlockClicked(worldIn, pos, playerIn);
-        worldIn.playSound(playerIn, pos, SoundEvents.entity_pig_hurt, SoundCategory.MASTER, 1F, 1F);
+        worldIn.playSound(playerIn, pos, SoundEvents.ENTITY_PIG_HURT, SoundCategory.MASTER, 1F, 1F);
     }
 
     private void dropItemStack(World world, BlockPos pos, EntityPlayer player, ItemStack stack) {
@@ -80,7 +80,7 @@ public class PiggoNomBlock extends PinkinationBlock {
                             if (!playerInventory.addItemStackToInventory(item)) {
                                 dropItemStack(worldIn, pos, playerIn, item);
                             }
-                            worldIn.playSound(playerIn, pos, SoundEvents.entity_player_burp, SoundCategory.MASTER, 1F, 1F);
+                            worldIn.playSound(playerIn, pos, SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.MASTER, 1F, 1F);
                         }
                     }
                 }
@@ -112,16 +112,16 @@ public class PiggoNomBlock extends PinkinationBlock {
 
 
             }
-            worldIn.playSound(playerIn, pos, SoundEvents.entity_pig_ambient, SoundCategory.MASTER, 1F, 1F);
+            worldIn.playSound(playerIn, pos, SoundEvents.ENTITY_PIG_AMBIENT, SoundCategory.MASTER, 1F, 1F);
         } else if (side == facing.getOpposite()) {
 
 
             worldIn.spawnParticle(EnumParticleTypes.FLAME, facepos.getX(), pos.getY(), pos.getZ(), 0.0D, 1.0D, 0.0D);
 
-            worldIn.playSound(playerIn, pos, SoundEvents.entity_endermen_scream, SoundCategory.MASTER, 1F, 1F);
-            worldIn.playSound(playerIn, pos, SoundEvents.entity_pig_death, SoundCategory.MASTER, 1F, 1F);
+            worldIn.playSound(playerIn, pos, SoundEvents.ENTITY_ENDERMEN_SCREAM, SoundCategory.MASTER, 1F, 1F);
+            worldIn.playSound(playerIn, pos, SoundEvents.ENTITY_PIG_HURT, SoundCategory.MASTER, 1F, 1F);
         } else {
-            worldIn.playSound(playerIn, pos, SoundEvents.entity_pig_ambient, SoundCategory.MASTER, 1F, 1F);
+            worldIn.playSound(playerIn, pos, SoundEvents.ENTITY_PIG_AMBIENT, SoundCategory.MASTER, 1F, 1F);
         }
         return super.onBlockActivated(worldIn, pos, state, playerIn, hand, heldItem, side, hitX, hitY, hitZ);
 

@@ -27,7 +27,7 @@ public class PiggoDebugBlock extends PinkinationBlock {
         setHarvestLevel("pickaxe", 1);
 
 
-        this.setCreativeTab(CreativeTabs.tabBlock);   // the block will appear on the Blocks tab in creative
+        this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);   // the block will appear on the Blocks tab in creative
     }
 
     @Override
@@ -75,7 +75,7 @@ public class PiggoDebugBlock extends PinkinationBlock {
         }
 
 
-        worldIn.playSound(playerIn, pos, SoundEvents.entity_pig_ambient, SoundCategory.MASTER, 1F, 1F);
+        worldIn.playSound(playerIn, pos, SoundEvents.ENTITY_PIG_AMBIENT, SoundCategory.MASTER, 1F, 1F);
 
         return super.onBlockActivated(worldIn, pos, state, playerIn, hand, heldItem, side, hitX, hitY, hitZ);
 

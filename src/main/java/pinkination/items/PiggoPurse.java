@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class PiggoPurse extends Item {
     public PiggoPurse() {
-        this.setCreativeTab(CreativeTabs.tabMaterials);
+        this.setCreativeTab(CreativeTabs.MATERIALS);
         this.setUnlocalizedName("pinkination.piggopurse");
 
 

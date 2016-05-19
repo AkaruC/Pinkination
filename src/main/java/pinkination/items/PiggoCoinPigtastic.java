@@ -7,7 +7,7 @@ import scala.reflect.internal.Trees;
 public class PiggoCoinPigtastic extends ItemCoin {
 
     public PiggoCoinPigtastic() {
-        this.setCreativeTab(CreativeTabs.tabMaterials);
+        this.setCreativeTab(CreativeTabs.MATERIALS);
         this.setUnlocalizedName("pinkination.piggocoinpigtastic");
         this.setValue(262144);
 

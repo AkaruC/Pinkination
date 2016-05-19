@@ -22,7 +22,7 @@ public class PiggoSwapBlock extends PinkinationBlock {
         setHardness(2.0F);
         setHarvestLevel("pickaxe", 1);
 
-        this.setCreativeTab(CreativeTabs.tabBlock);   // the block will appear on the Blocks tab in creative
+        this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);   // the block will appear on the Blocks tab in creative
     }
 
     @SideOnly(Side.CLIENT)
@@ -34,7 +34,7 @@ public class PiggoSwapBlock extends PinkinationBlock {
     @Override
     public void onBlockClicked(World worldIn, BlockPos pos, EntityPlayer playerIn) {
         super.onBlockClicked(worldIn, pos, playerIn);
-        worldIn.playSound(playerIn, pos, SoundEvents.entity_pig_hurt, SoundCategory.MASTER, 1F, 1F);
+        worldIn.playSound(playerIn, pos, SoundEvents.ENTITY_PIG_HURT, SoundCategory.MASTER, 1F, 1F);
     }
 
 }

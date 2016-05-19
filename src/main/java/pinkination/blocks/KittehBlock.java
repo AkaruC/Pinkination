@@ -24,7 +24,7 @@ public class KittehBlock extends PinkinationBlock {
         setUnlocalizedName("pinkination.kittehblock");
 
 
-        this.setCreativeTab(CreativeTabs.tabBlock);
+        this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
     }
 
     @SideOnly(Side.CLIENT)
@@ -36,7 +36,7 @@ public class KittehBlock extends PinkinationBlock {
     @Override
     public void onBlockClicked(World worldIn, BlockPos pos, EntityPlayer playerIn) {
         super.onBlockClicked(worldIn, pos, playerIn);
-        worldIn.playSound(playerIn, pos, SoundEvents.entity_pig_hurt, SoundCategory.MASTER, 1F, 1F);
+        worldIn.playSound(playerIn, pos, SoundEvents.ENTITY_PIG_HURT, SoundCategory.MASTER, 1F, 1F);
     }
 
 }

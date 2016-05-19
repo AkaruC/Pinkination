@@ -20,7 +20,7 @@ public class PinkinationBlock extends Block {
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
 
     public PinkinationBlock() {
-        super(Material.rock);
+        super(Material.ROCK);
 
 
     }

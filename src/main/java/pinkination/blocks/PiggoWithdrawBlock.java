@@ -40,7 +40,7 @@ public class PiggoWithdrawBlock extends PinkinationBlock {
         setHarvestLevel("pickaxe", 1);
 
 
-        this.setCreativeTab(CreativeTabs.tabBlock);   // the block will appear on the Blocks tab in creative
+        this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);   // the block will appear on the Blocks tab in creative
     }
 
     @SideOnly(Side.CLIENT)
@@ -52,7 +52,7 @@ public class PiggoWithdrawBlock extends PinkinationBlock {
     @Override
     public void onBlockClicked(World worldIn, BlockPos pos, EntityPlayer playerIn) {
         super.onBlockClicked(worldIn, pos, playerIn);
-        worldIn.playSound(playerIn, pos, SoundEvents.entity_pig_hurt, SoundCategory.MASTER, 1F, 1F);
+        worldIn.playSound(playerIn, pos, SoundEvents.ENTITY_PIG_HURT, SoundCategory.MASTER, 1F, 1F);
     }
 
 
@@ -61,7 +61,7 @@ public class PiggoWithdrawBlock extends PinkinationBlock {
         EnumFacing facing = state.getValue(FACING);
 
 
-        if (side == facing && heldItem.getItem() == ModItems.piggoPurse) {
+        if (side == facing && heldItem.getItem() == ModItems.piggoPurse && heldItem !=  null) {
 
             if (worldIn.isRemote) {
                 pressed++;
