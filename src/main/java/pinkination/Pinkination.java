@@ -46,6 +46,7 @@ public class Pinkination {
         PinkinationPacketHandler.init();
     }
 
+    @SuppressWarnings("EmptyMethod")
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
 

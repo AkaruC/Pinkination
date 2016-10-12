@@ -5,6 +5,6 @@ package pinkination.proxy;
  */
 public interface IProxy {
 
-    public void registerRenderers();
+    void registerRenderers();
 
 }

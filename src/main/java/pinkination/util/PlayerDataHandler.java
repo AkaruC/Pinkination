@@ -89,11 +89,13 @@ public class PlayerDataHandler {
             return this.balance;
         }
 
+
         public PlayerData setBalance(int bal) {
             this.balance = bal;
             save();
             return this;
         }
+
 
         public PlayerData addBalance(int add) {
             this.balance = balance + add;
@@ -102,6 +104,7 @@ public class PlayerDataHandler {
 
 
         }
+
         public PlayerData subtractBalance(int sub) {
             this.balance = balance - sub;
             save();

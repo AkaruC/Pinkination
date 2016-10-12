@@ -71,29 +71,13 @@ public class PiggoWithdrawBlock extends PinkinationBlock {
 
             boolean enough = false;
             if (pressed == 1) {
-                if (PlayerDataHandler.get(playerIn).getBalance() >= ((ItemCoin) ModItems.piggoCoinCopper).getValue()) {
-                    enough = true;
-                } else {
-                    enough = false;
-                }
+                enough = PlayerDataHandler.get(playerIn).getBalance() >= ((ItemCoin) ModItems.piggoCoinCopper).getValue();
             } else if (pressed == 2) {
-                if (PlayerDataHandler.get(playerIn).getBalance() >= ((ItemCoin) ModItems.piggoCoinSilver).getValue()) {
-                    enough = true;
-                } else {
-                    enough = false;
-                }
+                enough = PlayerDataHandler.get(playerIn).getBalance() >= ((ItemCoin) ModItems.piggoCoinSilver).getValue();
             } else if (pressed == 3) {
-                if (PlayerDataHandler.get(playerIn).getBalance() >= ((ItemCoin) ModItems.piggoCoinGold).getValue()) {
-                    enough = true;
-                } else {
-                    enough = false;
-                }
+                enough = PlayerDataHandler.get(playerIn).getBalance() >= ((ItemCoin) ModItems.piggoCoinGold).getValue();
             } else if (pressed == 4) {
-                if (PlayerDataHandler.get(playerIn).getBalance() >= ((ItemCoin) ModItems.piggoCoinPigtastic).getValue()) {
-                    enough = true;
-                } else {
-                    enough = false;
-                }
+                enough = PlayerDataHandler.get(playerIn).getBalance() >= ((ItemCoin) ModItems.piggoCoinPigtastic).getValue();
             }
             InventoryPlayer playerInventory = playerIn.inventory;
             ItemStack item;
