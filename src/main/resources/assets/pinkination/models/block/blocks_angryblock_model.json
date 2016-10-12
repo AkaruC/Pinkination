@@ -3,9 +3,9 @@
   "textures": {
     "down": "pinkination:blocks/pinkination_general_blankside",
     "up": "pinkination:blocks/pinkination_general_heart",
-    "north": "pinkination:blocks/pinkination_loveblock_faceside",
+    "north": "pinkination:blocks/pinkination_piggo_angry",
     "east": "pinkination:blocks/pinkination_general_blankside",
-    "south": "pinkination:blocks/pinkination_loveblock_faceside",
+    "south": "pinkination:blocks/pinkination_piggo_rear",
     "west": "pinkination:blocks/pinkination_general_blankside",
     "particle": "blocks/pink_wool"
   }

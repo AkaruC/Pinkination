@@ -32,7 +32,7 @@ public class PiggoDebugBlock extends PinkinationBlock {
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-        EnumFacing facing = state.getValue(FACING);
+
 
         ItemStack copper = new ItemStack(ModItems.piggoCoinCopper, 1);
         ItemStack silver = new ItemStack(ModItems.piggoCoinSilver, 1);

@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube",
+  "parent": "block/orientable",
   "textures": {
     "down": "pinkination:blocks/pinkination_general_blankside",
     "up": "pinkination:blocks/pinkination_piggo_bill",

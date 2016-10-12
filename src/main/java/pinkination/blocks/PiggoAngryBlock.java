@@ -20,13 +20,13 @@ import pinkination.items.ItemCoin;
 import pinkination.util.PlayerDataHandler;
 
 
-public class PiggoSmithyBlock extends PinkinationBlock {
+public class PiggoAngryBlock extends PinkinationBlock {
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
 
 
-    public PiggoSmithyBlock() {
+    public PiggoAngryBlock() {
 
-        setUnlocalizedName("pinkination.depositblock");
+        setUnlocalizedName("pinkination.angryblock");
 
         setHardness(2.0F);
         setHarvestLevel("pickaxe", 1);
@@ -47,33 +47,5 @@ public class PiggoSmithyBlock extends PinkinationBlock {
         worldIn.playSound(playerIn, pos, SoundEvents.ENTITY_PIG_HURT, SoundCategory.MASTER, 1F, 1F);
     }
 
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-        EnumFacing facing = state.getValue(FACING);
 
-
-        if (side == EnumFacing.EAST || side == EnumFacing.WEST) {
-            if (heldItem != null && heldItem.getItem().isRepairable()) {
-                InventoryPlayer playerInventory = playerIn.inventory;
-
-                for (int i = 0; i < playerInventory.getSizeInventory(); i++) {
-                    ItemStack stackInSlot = playerInventory.getStackInSlot(i);
-                    if (stackInSlot != null && stackInSlot.getItem() == heldItem.getItem() && heldItem.getItem().isRepairable()) {
-
-
-
-                        PlayerDataHandler.get(playerIn).addBalance(((ItemCoin) heldItem.getItem()).getValue());
-
-                    }
-
-
-                }
-            }
-        }
-
-        worldIn.playSound(playerIn, pos, SoundEvents.ENTITY_PIG_AMBIENT, SoundCategory.MASTER, 1F, 1F);
-
-        return super.onBlockActivated(worldIn, pos, state, playerIn, hand, heldItem, side, hitX, hitY, hitZ);
-
-
-    }
 }

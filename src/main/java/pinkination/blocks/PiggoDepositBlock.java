@@ -48,7 +48,7 @@ public class PiggoDepositBlock extends PinkinationBlock {
     }
 
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-        EnumFacing facing = state.getValue(FACING);
+
 
 
         if (side == EnumFacing.UP) {

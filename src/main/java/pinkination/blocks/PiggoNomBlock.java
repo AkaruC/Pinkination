@@ -64,7 +64,7 @@ public class PiggoNomBlock extends PinkinationBlock {
 
                 for (int i = 0; i < playerInventory.getSizeInventory(); i++) {
                     ItemStack stackInSlot = playerInventory.getStackInSlot(i);
-                    if (stackInSlot != null && stackInSlot.getItem() instanceof ItemFood) {
+                    if (stackInSlot != null && stackInSlot.getItem() instanceof ItemFood && stackInSlot == heldItem) {
 
                         int amount = ((ItemFood) stackInSlot.getItem()).getHealAmount(stackInSlot);
 
@@ -128,8 +128,5 @@ public class PiggoNomBlock extends PinkinationBlock {
     }
 
 
-// used by the renderer to control lighting and visibility of other blocks.
-    // set to true because this block is opaque and occupies the entire 1x1x1 space
-    // not strictly required because the default (super method) is true
 
 }

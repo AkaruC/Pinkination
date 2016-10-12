@@ -9,6 +9,8 @@ import pinkination.blocks.*;
  * Credit to WayofTime for this system in his bloodmagic mod
  */
 public class ModBlocks {
+
+    public static Block piggoAngry;
     public static Block piggoNom;
     public static Block love;
     public static Block kitteh;
@@ -23,6 +25,7 @@ public class ModBlocks {
         kitteh = registerBlock(new KittehBlock(), "blocks_kittehblock");
         piggoSwap = registerBlock(new PiggoSwapBlock(), "blocks_swapblock");
         piggoNom = registerBlock(new PiggoNomBlock(), "blocks_nomblock");
+        piggoAngry = registerBlock(new PiggoAngryBlock(), "blocks_angryblock");
         piggoDeposit = registerBlock(new PiggoDepositBlock(), "blocks_depositblock");
         piggoDebug = registerBlock(new PiggoDebugBlock(), "blocks_debugblock");
         piggoWithdraw = registerBlock(new PiggoWithdrawBlock(), "blocks_withdrawblock");
