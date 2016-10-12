@@ -61,7 +61,7 @@ public class PiggoWithdrawBlock extends PinkinationBlock {
         EnumFacing facing = state.getValue(FACING);
 
 
-        if (side == facing && heldItem.getItem() == ModItems.piggoPurse && heldItem !=  null) {
+        if (side == facing && heldItem !=  null &&  heldItem.getItem() == ModItems.piggoPurse) {
 
             if (worldIn.isRemote) {
                 pressed++;

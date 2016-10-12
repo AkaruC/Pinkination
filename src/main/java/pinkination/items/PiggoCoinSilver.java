@@ -8,6 +8,6 @@ public class PiggoCoinSilver extends ItemCoin {
     public PiggoCoinSilver() {
         this.setCreativeTab(CreativeTabs.MATERIALS);
         this.setUnlocalizedName("pinkination.piggocoinsilver");
-        this.setValue(64);
+        this.setValue(50);
     }
 }

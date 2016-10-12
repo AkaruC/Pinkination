@@ -16,6 +16,9 @@ public class TextHelper {
 
     public static String localize(String input, Object... format) {
         return I18n.translateToLocalFormatted(input, format);
+
+
+
     }
 
     public static String localizeEffect(String input, Object... format) {
